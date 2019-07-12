@@ -1,8 +1,8 @@
 # NLP-Works
-Assignment of AI-for-nlp-course-4-1
+# Assignment of AI-for-nlp-course-4-1
 
 
-Index
+Index of Lesson-1
 
 4.0.1 1 Auto_sentence_creater.py
 
