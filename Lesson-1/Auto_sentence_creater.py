@@ -35,12 +35,13 @@ def generate(gram, target):
     if target not in gram: return target
     expaned = [generate(gram, t) for t in choice(gram[target])]
     return ''.join([e if e != '/n' else '\n' for e in expaned if e != 'null'])
-
-print(generate(gram=create_grammar(narrator),target='narrate'))
-print(generate(gram=create_grammar(commentator),target='comment'),'\n')
+if __name__ == '__main__':
+    print(generate(gram=create_grammar(narrator),target='narrate'))
+    print(generate(gram=create_grammar(commentator),target='comment'),'\n')
 
 def generate_n(gram,target,n):
     gram_n = [generate(gram,target) for i in range(n)]
     return '\n'.join(gram_n)
-print(generate_n(gram=create_grammar(narrator),target='narrate',n=5))
-print(generate_n(gram=create_grammar(commentator),target='comment',n=5))
+if __name__ == '__main__':
+    print(generate_n(gram=create_grammar(narrator),target='narrate',n=5))
+    print(generate_n(gram=create_grammar(commentator),target='comment',n=5))
